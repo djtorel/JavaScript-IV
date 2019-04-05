@@ -142,6 +142,9 @@ const betty = new Student({
 });
 
 fred.grade(betty, 'JavaScript');
+betty.listSubjects();
+betty.PRAssignment('JavaScript Classes');
+betty.sprintChallenge('JavaScript Fundamentals');
 
 const allie = new ProjectManager({
   name: 'Allie',
@@ -160,5 +163,3 @@ allie.demo('ReasonML');
 allie.grade(betty, 'JavaScript Classes');
 allie.standUp('#webpt5_allie');
 allie.debugsCode(betty, 'JavaScript Classes');
-
-// MVP Complete
