@@ -160,3 +160,5 @@ allie.demo('ReasonML');
 allie.grade(betty, 'JavaScript Classes');
 allie.standUp('#webpt5_allie');
 allie.debugsCode(betty, 'JavaScript Classes');
+
+// MVP Complete
