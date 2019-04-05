@@ -35,6 +35,19 @@ class Instructor extends Person {
   grade(student, subject) {
     console.log(`${student.name} receives a prefect score on ${subject}`);
   }
+
+  addToGrade(student) {
+    let changeGradeAmount = Math.floor(Math.random() * (40 - -20 + 1)) + -20;
+    if (student.grade + changeGradeAmount < 1) {
+      student.grade = 1;
+    } else if (student.grade + changeGradeAmount > 100) {
+      student.grade = 100;
+    } else {
+      student.grade += changeGradeAmount;
+    }
+
+    console.log(`${student.name}'s grade is now: ${student.grade}`);
+  }
 }
 
 class Student extends Person {
@@ -51,6 +64,7 @@ class Student extends Person {
     this.previousBackground = previousBackground;
     this.className = className;
     this.favSubjects = favSubjects;
+    this.grade = 1;
   }
 
   listSubjects() {
@@ -63,6 +77,16 @@ class Student extends Person {
 
   sprintChallenge(subject) {
     console.log(`${this.name} has begun spring challenge on ${subject}`);
+  }
+
+  graduate() {
+    if (this.grade >= 70) {
+      console.log(`${this.name} graduates LamdbaSchool!!`);
+    } else {
+      console.log(
+        `${this.name} still has some work to do in order to graduate.`
+      );
+    }
   }
 }
 
@@ -163,3 +187,19 @@ allie.demo('ReasonML');
 allie.grade(betty, 'JavaScript Classes');
 allie.standUp('#webpt5_allie');
 allie.debugsCode(betty, 'JavaScript Classes');
+
+// Stretch
+fred.addToGrade(betty);
+fred.addToGrade(betty);
+fred.addToGrade(betty);
+fred.addToGrade(betty);
+fred.addToGrade(betty);
+fred.addToGrade(betty);
+fred.addToGrade(betty);
+fred.addToGrade(betty);
+fred.addToGrade(betty);
+fred.addToGrade(betty);
+fred.addToGrade(betty);
+fred.addToGrade(betty);
+
+betty.graduate();
